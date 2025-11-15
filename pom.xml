@@ -14,4 +14,48 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>internal-artifactory</id>
+            <url>https://int.repositories.cloud.sap/artifactory/build-releases</url>
+        </repository>
+        <repository>
+            <id>ext.artifactory.build.releases</id>
+            <name>External Artifactory Build Releases</name>
+            <url>https://common.repositories.cloud.sap/artifactory/build.releases</url>
+        </repository>
+         <repository>
+            <id>central</id>
+            <name>Maven Central Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository> 
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>internal-artifactory</id>
+            <url>https://int.repositories.cloud.sap/artifactory/build-releases</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>ext.artifactory.build.releases</id>
+            <url>https://common.repositories.cloud.sap/artifactory/build.releases</url>
+        </pluginRepository>
+         <pluginRepository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository> 
+    </pluginRepositories>
+
 </project>
